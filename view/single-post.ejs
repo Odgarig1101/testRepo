@@ -1,0 +1,34 @@
+<%- include('./layout/header.ejs'); %>
+    <header class="main-header post-head " style="background-image: url(../photos/<%=blog.blogPhoto%>)">
+        <div class="vertical">
+            <div class="main-header-content inner">
+                <h1 class="post-title">
+                    <%= blog.title %>
+                </h1>
+                <div class="entry-title-divider">
+                    <span></span><span></span><span></span>
+                </div>
+                <section class="post-meta">
+                    <time class="post-date" datetime="2015-12-13"><%= blog.date %></time> |
+                    <a class="scrolltocomments" href="#disqus_thread">
+                        <%= blog.user %>
+                    </a>
+                </section>
+            </div>
+        </div>
+    </header>
+    <main id="content" class="content" role="main">
+        <div class="wraps">
+            <img src="../img/shadow.png" class="wrapshadow">
+            <article class="post featured">
+                <section class="post-content">
+
+
+                    <p>
+                        <strong><%= blog.desTitle %></strong>
+                    </p>
+                    <p>
+                        <em><%= blog.description %></em>
+                    </p>
+                </section>
+                <%- include('./layout/footer.ejs'); %>

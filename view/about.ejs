@@ -1,0 +1,49 @@
+<%- include('./layout/header.ejs'); %>
+    <header class="main-header post-head " style="background-image: url(../img/random.jpg)">
+        <div class="vertical">
+            <div class="main-header-content inner">
+                <h1 class="post-title">About Us</h1>
+            </div>
+        </div>
+    </header>
+    <main class="content" role="main">
+        <h2>Our story</h2>
+        <section class="post-content">
+
+            <p>
+                <strong>The blog combining journalist David's years of experience covering fashion and culture for among others. Read my blog and you will learn how to become a fashion editor.</strong>
+            </p>
+            <p>
+                A decanter of aguardiente, a bowl of loaf sugar, and a pitcher of cold water from the spring, were set before us, and, being duly honoured, had a most reviving influence upon our spirits as well as our corporeal energies.
+            </p>
+        </section>
+
+        <% for(var i = 0; i< users.length; i++) { %>
+            <div class="grid-item" style="display: inline-block;">
+                <article class="post tag-romance">
+                    <img src="../avatars/<%= users[i].profilePicture %>">
+                </article>
+                <h2 class="post-title">
+                    <p>
+                        <%= users[i].username %>
+                    </p>
+                </h2>
+            </div>
+            <% } %>
+
+
+    </main>
+    <footer class="site-footer clearfix">
+        <a href="#top" id="back-to-top" class="back-top"></a>
+        <div class="text-center">
+            <a href="index.html">Nectaria Template</a> &copy; 2016<br/> Free HTML Template by <a href="https://wowthemes.net">WowThemes.net</a>
+        </div>
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/masonry.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+    </body>
+
+    </html>
